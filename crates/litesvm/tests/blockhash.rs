@@ -1,6 +1,6 @@
 use {
     litesvm::LiteSVM,
-    solana_account::{state_traits::StateMut, ReadableAccount},
+    solana_account::{state_traits::StateMutWincode, ReadableAccount},
     solana_address::Address,
     solana_keypair::Keypair,
     solana_message::Message,
@@ -22,12 +22,12 @@ fn data_from_state(state: &NonceState) -> &Data {
     }
 }
 
-fn data_from_account<T: ReadableAccount + StateMut<Versions>>(account: &T) -> Data {
+fn data_from_account<T: ReadableAccount + StateMutWincode<Versions>>(account: &T) -> Data {
     data_from_state(&state_from_account(account)).clone()
 }
 
-fn state_from_account<T: ReadableAccount + StateMut<Versions>>(account: &T) -> NonceState {
-    let versions = StateMut::<Versions>::state(account).unwrap();
+fn state_from_account<T: ReadableAccount + StateMutWincode<Versions>>(account: &T) -> NonceState {
+    let versions = StateMutWincode::<Versions>::state(account).unwrap();
     NonceState::from(versions)
 }
 
