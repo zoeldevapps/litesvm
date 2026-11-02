@@ -102,7 +102,6 @@ pub fn deploy_upgradeable_program(
             &payer_pk,
             lamports,
             program_bytes.len() * 2,
-            true,
         )
         .unwrap(),
         Some(&payer_pk),

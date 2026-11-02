@@ -3,7 +3,7 @@ use {
     litesvm::LiteSVM,
     solana_account::Account,
     solana_address::Address,
-    solana_instruction::error::InstructionError,
+    solana_instruction_error::InstructionError,
     solana_keypair::Keypair,
     solana_message::Message,
     solana_native_token::LAMPORTS_PER_SOL,

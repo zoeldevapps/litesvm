@@ -2,7 +2,7 @@ use {
     ed25519_dalek::Signer as DalekSigner,
     litesvm::LiteSVM,
     solana_ed25519_program::{self as ed25519_instruction, new_ed25519_instruction_with_signature},
-    solana_instruction::error::InstructionError,
+    solana_instruction_error::InstructionError,
     solana_keypair::Keypair,
     solana_message::Message,
     solana_secp256k1_program::{

@@ -10,7 +10,8 @@ use {
         compute_budget::ComputeBudget, compute_budget_limits::MAX_LOADED_ACCOUNTS_DATA_SIZE_BYTES,
     },
     solana_compute_budget_interface::ComputeBudgetInstruction,
-    solana_instruction::{error::InstructionError, AccountMeta},
+    solana_instruction::AccountMeta,
+    solana_instruction_error::InstructionError,
     solana_keypair::Keypair,
     solana_loader_v3_interface::get_program_data_address,
     solana_message::{
